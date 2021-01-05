@@ -1,291 +1,45 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142188401-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-142188401-1');
-    </script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="Description" content="Mario Lucic, personal website.">
-    <meta name="theme-color" content="#1aa260" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Mario Lucic</title>
-    <style>
-      @import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
-      body, input, select, textarea {font-family: "Raleway", Arial, Helvetica, sans-serif; font-size: 12pt; font-weight: 400; line-height: 1.6em;}
-      a			{color: #4285F4}
-      nav a             {color: white}
-      nav a:hover       {color: white}
-      h4                {color: #1aa260}
-      strong	        {color: #DB4437; font-weight:400}
-      ol.pubs		{list-style-type: decimal; padding-left: 2em}
-      ul.pub		{list-style:none; margin-bottom:1em}
-      ul.pub		{list-style:none; margin-bottom:1em}
-      ul.pub li.title	{color: #333333}
-      ul.pub li.authors {color: #555555}
-      ul.pub li.venue	{font-style: italic}
-      ul.pub li.venue a {text-decoration: none}
-      .header           {background-color:#DADADA; margin-bottom:5px}
-      .card             {border:none}
-      .container         {margin-top: 1em}
-      :target {display: block; position: relative; top: -120px; visibility: hidden;}
-    </style>
-  </head>
-  <body>
-    <nav class="nav justify-content-center sticky-top" style="background:#4285F4;color:white">
-      <a class="nav-link" href="#contact">Contact</a>
-      <a class="nav-link" href="#bio">Bio</a>
-      <a class="nav-link" href="#news">News</a>
-      <a class="nav-link" href="#publications">Publications</a>
-    </nav>
-    <div class="container">
-      <div class="row">
-	<div class="col">
-	  <div class="media">
-	    <img src="lucic.jpg" style="border:1px #ADADAD solid; max-width:33%" class="mr-1 mt-3 rounded-circle" alt="Mario Lucic" />
-	    <div class="media-body" style="max-width:66%;overflow-x:hidden">
-	      <div class="card">
-		<div class="card-body">
-		  <a name="contact"></a>
-		  <h3 class="card-title"><a style="color:#0F9D58" href="https://ai.google/research/people/MarioLucic">Mario Lučić</a></h3>
-		  <h6 class="card-subtitle mb-2 text-muted">Senior Research Scientist</h6>
-		  <h6 class="card-subtitle mb-2 text-muted">Google Research</h6>
-		  <p class="card-text">
-		    <div><h6><a href="https://scholar.google.com/citations?user=SzZRlcMAAAAJ&hl=en&oi=ao">Google Scholar</a></h6></div>
-		    <div><h6><a href="https://www.linkedin.com/in/mariolucic">LinkedIn</a></h6></div>
-		    <div><h6><a href="#">lastname@google.com</a></h6></div>
-		    <div><a href="https://twitter.com/MarioLucic_?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @MarioLucic_</a>
-		      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-		    </div>
-		  </p>
-		</div>
-	      </div>
-	    </div>
-	  </div>
-	</div>
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142188401-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-142188401-1');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="Description" content="Mario Lucic, personal website.">
+  <meta name="theme-color" content="#1aa260" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Mario Lucic</title>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+    body, input, select, textarea { font-family: "Raleway", Arial, Helvetica, sans-serif; font-size: 12pt; font-weight: 400; line-height: 1.6em; }
+    a { color: #4285F4 }
+    strong { color: #DB4437; font-weight: 500 }
+  </style>
+</head>
+
+<body>
+  <div class="container d-flex align-items-center min-vh-100">
+    <div class="row">
+      <div class="col-sm-2 text-center">
+        <img src="lucic.jpg" style="border:1px #ADADAD solid;max-width:100%;" class="rounded-circle text-center"
+          alt="Mario Lucic" />
+      </div>
+      <div class="col-sm-2 text-center">
+        <h3><a href="https://ai.google/research/people/MarioLucic">Mario Lučić</a></h3>
+        <h6 class="mb-1 text-muted">Research Scientist</h6>
+        <h6 class="mb-2 text-muted">Google Research</h6>
+        <h6 class="mb-1"><a href="https://scholar.google.com/citations?user=SzZRlcMAAAAJ&hl=en&oi=ao">Google Scholar</a></h6>
+        <h6 class="mb-1"><a href="https://www.linkedin.com/in/mariolucic">LinkedIn</a></h6>
+        <h6 class="mb-1"><a href="https://twitter.com/MarioLucic_">Twitter</a></h6>
+      </div>
+      <div class="col-sm-8 text-center text-muted">
+        <p style="text-align:justify">Mario Lucic is a senior research scientist at Google Research (Brain team) where he is pursuing fundamental challenges in machine learning and artificial intelligence. He received his Ph.D. in Computer Science from ETH Zurich (2017), a M.Sc. degree (cum laude) in Computer Science from Politecnico di Milano (Italy), and a B.Sc. degree in Computing from University of Zagreb (Croatia). During his PhD he was supported by an IBM Fellowship and was an Associated Fellow at the Max Planck ETH Center for Learning Systems. Before starting his doctoral studies he was working at IBM Research on ML models for predictive maintenance. His research on machine learning and artificial intelligence has received awards at several premier conferences, most notably the <strong>best paper award at the International Conference on Machine Learning and the best student paper award at the International Conference on Artificial Intelligence and Statistics.</strong> Mario Lucic is serving as Area Chair for NeurIPS and ICLR conferences.</p>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-	<div class="col">
-	  <div class="media">
-	    <div class="media-body">
-	      <a name="bio"></a>
-	      <h4 class="mt-0">Bio</h4>
-	      <p style="margin:0;text-align:justify">
-		Mario Lucic is a senior research scientist at Google Research (Brain team) where he is pursuing fundamental challenges in machine learning and artificial intelligence. He received his Ph.D. in Computer Science from ETH Zurich (2017), a M.Sc. degree (cum laude) in Computer Science from Politecnico di Milano (Italy), and a B.Sc. degree in Computing from University of Zagreb (Croatia). During his PhD he was supported by an IBM Fellowship and was an Associated Fellow at the Max Planck ETH Center for Learning Systems. Before starting his doctoral studies he was working at IBM Research on ML models for predictive maintenance. His research on machine learning and artificial intelligence has received awards at several premier conferences, most notably the <strong>best paper award at the International Conference on Machine Learning and the best student paper award at the International Conference on Artificial Intelligence and Statistics.</strong></p>
-	    </div>
-	  </div>
-	</div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-	<div class="col">
-	  <div class="media">
-	    <div class="media-body">
-	      <a name="news"></a>
-	      <h4 class="mt-0">News</h4>
-	      <ul style="margin-bottom:0">
-	      	<li>Area Chair, <a href="https://iclr.cc/Conferences/2020/CallForPapers">International Conference on Learning Representations 2020</a>.</li>
-		<li><strong>Best Paper Award at ICML 2019</strong>!</li>
-		
-		<li>Led a collaboration between Berkeley Artificial Intelligence Research Lab and Google Brain on <a href="https://arxiv.org/abs/1911.11357">"Semantic Bottleneck Scene Generation"</a>.</li>
-		<li>Google AI Blog <a href="http://ai.googleblog.com/2019/03/reducing-need-for-labeled-data-in.html">on reducing the need for labeled data in conditional GANs</a>.</li>
-		<li><a href="https://github.com/google/compare_gan">compare_gan</a> reached 1400 stars on GitHub.</li>
-		<li>Recent invited talks/teaching/tutorials:
-		  <ul>
-		    <li>"Recent Advances in Deep Generative Models", Yale Institute for Network Science</li>
-		    <li>"On Mutual Information Maximization for Representation Learning", University of Oxford</li>
-		    <li>"Using deep learning to solve challenging problems", University of Cambridge (organized by the German National Merit Foundation)</li>
-		    <li>"Advanced Topics in Machine Learning", <a href="https://aimsammi.org/">African Master's in Machine Intelligence (AMMI), Kigali (Rwanda)</a></li>
-		    <li>"Recent advancements in Generative Adversarial Networks", EPFL</li>
-		    <li>"Using Deep Learning to Solve Challenging Problems", <a href="https://karijere.fer.hr/en/google-ai-using-deep-learning-to-solve-challenging-problems/">FER Zagreb</a></li>
-		    <li>"Quantitative evaluation of generative models", University of Oxford</li>
-		    <li>"Deep generative models", <a href="https://www.ds3-datascience-polytechnique.fr/">Data Science Summer School (DS<sup>3</sup>), École polytechnique</a></li>
-		    
-		  </ul>
-		</li>
-	      </ul>
-	    </div>
-	  </div>
-	</div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-	<div class="col">
-	  <div class="media">
-	    <div class="media-body">
-	      <a name="publications"></a>
-	      <h4 class="mt-0">Publications</h4>
-	      <ol class="pubs" reversed>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1907.13625">On Mutual Information Maximization for Representation Learning</a></li>
-		    <li class="authors">Michael Tschannen*, Josip Djolonga*, Paul K. Rubenstein, Sylvain Gelly, Mario Lucic</li>
-		    <li class="venue">International Conference on Learning Representations, 2020</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1905.10768">Evaluating Generative Models Using Divergence Frontiers</a></li>
-		    <li class="authors">Josip Djolonga, Mario Lucic, Marco Cuturi, Olivier Bachem, Olivier Bousquet, Sylvain Gelly</li>
-		    <li class="venue">International Conference on Artificial Intelligence and Statistics, 2020</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1912.02783">Self-Supervised Learning of Video-Induced Visual Invariances</a></li>
-		    <li class="authors">Michael Tschannen, Josip Djolonga, Marvin Ritter, Aravindh Mahendran, Neil Houlsby, Sylvain Gelly, Mario Lucic</li>
-		    <li class="venue">Conference on Computer Vision and Pattern Recognition, 2020</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1910.04867">The Visual Task Adaptation Benchmark</a></li>
-		    <li class="authors">Xiaohua Zhai*, Joan Puigcerver* et al.</li>
-		    <li class="venue">Preprint, 2019</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1911.11357">Semantic Bottleneck Scene Generation</a></li>
-		    <li class="authors">Samaneh Azadi, Michael Tschannen, Eric Tzeng, Sylvain Gelly, Trevor Darrell, Mario Lucic</li>
-		    <li class="venue">Preprint, 2019</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1811.12359">Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations</a><strong> [Best Paper Award]</strong></li>
-		    <li class="authors">Francesco Locatello, Stefan Bauer, Mario Lucic, Sylvain Gelly, Bernard Schölkopf, Olivier Bachem</li>
-		    <li class="venue">International Conference on Machine Learning, 2019</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1903.02271">High-Fidelity Image Generation With Fewer Labels</a></li>
-		    <li class="authors">Mario Lucic*, Michael Tschannen*, Marvin Ritter*, Xiaohua Zhai, Olivier Bachem, Sylvain Gelly</li>
-		    <li class="venue">International Conference on Machine Learning, 2019</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1807.04720">A Large-Scale Study on Regularization and Normalization in GANs</a></li>
-		    <li class="authors">Karol Kurach*, Mario Lucic*, Xiaohua Zhai, Marcin Michalski, Sylvain Gelly</li>
-		    <li class="venue">International Conference on Machine Learning, 2019</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1811.11212">Self-Supervised GANs via Auxiliary Rotation Loss</a></li>
-		    <li class="authors">Ting Chen, Xiaohua Zhai, Marvin Ritter, Mario Lucic, Neil Houlsby</li>
-		    <li class="venue">Conference on Computer Vision and Pattern Recognition, 2019</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1810.01365">On Self-Modulation for Generative Adversarial Networks</a></li>
-		    <li class="authors">Ting Chen, Mario Lucic, Neil Houlsby, Sylvain Gelly</li>
-		    <li class="venue">International Conference on Learning Representations, 2019</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1812.05069">Recent Advances in Autoencoder-Based Representation Learning</a></li>
-		    <li class="authors">Michael Tschannen, Olivier Bachem, Mario Lucic</li>
-		    <li class="venue">Bayesian Deep Learning Workshop, NeurIPS, 2018</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1702.08248">Scalable k-Means Clustering via Lightweight Coresets</a></li>
-		    <li class="authors">Olivier Bachem, Mario Lucic, Andreas Krause</li>
-		    <li class="venue">International Conference on Knowledge Discovery & Data Mining, 2018</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1711.10337">Are GANs Created Equal? A Large-Scale Study</a></li>
-		    <li class="authors">Mario Lucic*, Karol Kurach*, Marcin Michalski, Olivier Bousuqet, Sylvain Gelly</li>
-		    <li class="venue">Advances in Neural Information Processing Systems, 2018</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1805.11057">Deep Generative Models for Distribution-Preserving Lossy Compression</a></li>
-		    <li class="authors">Michael Tschannen, Eirikur Augustsson, Mario Lucic</li>
-		    <li class="venue">Advances in Neural Information Processing Systems, 2018</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1806.00035">Assessing Generative Models via Precision and Recall</a></li>
-		    <li class="authors">Mehdi S. M. Sajjadi, Olivier Bachem, Mario Lucic, Olivier Bousquet, Sylvain Gelly</li>
-		    <li class="venue">Advances in Neural Information Processing Systems, 2018</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1711.09649">One-Shot Coresets: The Case of k-Clustering</a></li>
-		    <li class="authors">Olivier Bachem, Mario Lucic, Silvio Lattanzi</li>
-		    <li class="venue">International Conference on Artificial Intelligence and Statistics, 2018</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="http://proceedings.mlr.press/v70/bachem17a/bachem17a.pdf">Uniform Deviation Bounds for k-Means Clustering</a></li>
-		    <li class="authors">Olivier Bachem, Mario Lucic, Hamed Hassani, Andreas Krause</li>
-		    <li class="venue">International Conference on Machine Learning, 2018</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="http://proceedings.mlr.press/v70/bachem17b.html">Distributed and Provably Good Seedings for k-Means in Constant Rounds</a></li>
-		    <li class="authors">Olivier Bachem, Mario Lucic, Andreas Krause</li>
-		    <li class="venue">Advances in Neural Information Processing Systems, 2018</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="http://www.jmlr.org/papers/volume18/15-506/15-506.pdf">Training Gaussian Mixture Models at Scale via Coresets</a></li>
-		    <li class="authors">Mario Lucic, Matthew Faulkner, Andreas Krause, Dan Feldman</li>
-		    <li class="venue">Journal of Machine Learning Research, 2018</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1703.06476">Practical Coreset Constructions for Machine Learning</a></li>
-		    <li class="authors">Olivier Bachem*, Mario Lucic*, Andreas Krause</li>
-		    <li class="venue">Preprint, 2017</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1711.01566">Stochastic Submodular Maximization: The Case of Coverage Functions</a></li>
-		    <li class="authors">Mohammad Karimi, Mario Lucic, Hamed Hassani, Andreas Krause</li>
-		    <li class="venue">Advances in Neural Information Processing Systems, 2017</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1605.00519">Linear-Time Outlier Detection via Sensitivity</a></li>
-		    <li class="authors">Mario Lucic, Olivier Bachem, Andreas Krause</li>
-		    <li class="venue">International Joint Conference on Artificial Intelligence, 2016</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1605.09619">Horizontally Scalable Submodular Maximization</a></li>
-		    <li class="authors">Mario Lucic, Olivier Bachem, Morteza Zadimoghaddam, Andreas Krause</li>
-		    <li class="venue">International Conference on Machine Learning, 2016</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1508.05243">Strong Coresets for Hard and Soft Bregman Clustering with Applications to Exponential Family Mixtures</a></li>
-		    <li class="authors">Mario Lucic*, Olivier Bachem, Andreas Krause</li>
-		    <li class="venue">International Conference on Artificial Intelligence and Statistics, 2016</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://papers.nips.cc/paper/6478-fast-and-provably-good-seedings-for-k-means">Fast and Provably Good Seedings for k-Means</a></li>
-		    <li class="authors">Olivier Bachem, Mario Lucic, Hamed Hassani, Andreas Krause</li>
-		    <li class="venue">Advances in Neural Information Processing Systems, 2016<strong> [Oral presentation]</strong></li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/download/12147/11759">Approximate K-Means++ in Sublinear Time</a></li>
-		    <li class="authors">Olivier Bachem, Mario Lucic, Hamed Hassani, Andreas Krause</li>
-		    <li class="venue">AAAI Conference on Artificial Intelligence, 2016</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://link.springer.com/chapter/10.1007/978-3-319-45741-3_20">Quantifying Location Privacy Leakage from Transaction Prices</a></li>
-		    <li class="authors">Arthur Gervais, Hubert Ritzdorf, Mario Lucic, Vincent Lenders, Srdjan Capkun</li>
-		    <li class="venue">European Symposium on Research in Computer Security, 2016</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="">Tradeoffs for Space, Time, Data and Risk in Unsupervised Learning</a></li>
-		    <li class="authors">Mario Lucic, Mesrob I Ohannessian, Amin Karbasi, Andreas Krause</li>
-		    <li class="venue">International Conference on Artificial Intelligence and Statistics, 2015<strong> [Best Student Paper Award]</strong></li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="http://proceedings.mlr.press/v37/bachem15.html">Coresets for Nonparametric Estimation - the Case of DP-Means</a></li>
-		    <li class="authors">Olivier Bachem, Mario Lucic, Andreas Krause</li>
-		    <li class="venue">International Conference on Machine Learning, 2015</li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://arxiv.org/abs/1406.3175">Fast and Robust Least Squares Estimation in Corrupted Linear Models</a></li>
-		    <li class="authors">Brian McWilliams*, Gabriel Krummenacher*, Mario Lucic, Joachim Buhmann</li>
-		    <li class="venue">Advances in Neural Information Processing Systems, 2014<strong> [Spotlight presentation]</strong></li></ul>
-		</li>
-		<li><ul class="pub">
-		    <li class="title"><a href="https://ieeexplore.ieee.org/document/5958118">Automatic Classification of Change Requests for Improved IT Service Quality</a></li>
-		    <li class="authors">Cristina Kadar, Dorothea Wiesmann, Jose Iria, Dirk Husemann, Mario Lucic</li>
-		    <li class="venue">Annual SRII Global Conference, 2011 <strong><a href="https://patentimages.storage.googleapis.com/e7/9d/69/da3a04891dc6c2/US9406023.pdf">[patent]</a></strong></li></ul>
-		</li>
-	      </ol>
-	    </div>
-	  </div>
-	</div>
-      </div>
-    </div>
-    <div class="footer-copyright text-center py-3">© Mario Lučić 2020 </div>
-  </body>
+  </div>
+</body>
 </html>
