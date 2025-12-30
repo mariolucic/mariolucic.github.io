@@ -1,44 +1,77 @@
-<html lang="en"><head>
-  <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-27D6E2HCFW&amp;cx=c&amp;gtm=4e5b50"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-142188401-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'UA-142188401-1');
-  </script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="Description" content="Mario Lucic, personal website.">
-  <meta name="theme-color" content="#1aa260">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <title>Mario Lucic</title>
-  <style>
-    @import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
-    body, input, select, textarea { font-family: "Raleway", Arial, Helvetica, sans-serif; font-size: 12pt; font-weight: 400; line-height: 1.6em; }
-    a { color: #4285F4 }
-    strong { color: #DB4437; font-weight: 500 }
-  </style>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mario Lucic, Research Scientist at Google DeepMind.">
+    <meta name="theme-color" content="#0f172a">
+    <title>Mario Lucic</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics (Legacy) -->
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142188401-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-142188401-1');
+    </script>
 </head>
+
 <body>
-  <div class="container d-flex align-items-center min-vh-100">
-    <div class="row">
-      <div class="col-sm-2 text-right">
-        <img src="https://lucic.ai/lucic.jpg" style="border:1px #ADADAD solid;max-width:85%;" class="rounded-circle text-center" alt="Mario Lucic">
-      </div>
-      <div class="col-sm-3 text-center">
-        <h3 class="mb-1"><a href="https://ai.google/research/people/MarioLucic">Mario Lučić</a></h3>
-        <h6 class="mb-1 text-muted">Research Scientist, Director</h6>
-        <h6 class="mb-1"><a href="http://deepmind.google">Google DeepMind</a></h6>
-        <h6 class="mb-1"><a href="https://scholar.google.com/citations?user=SzZRlcMAAAAJ&amp;hl=en&amp;oi=ao">Research</a></h6>
-        <h6 class="mb-1"><a href="https://twitter.com/MarioLucic_">Twitter</a></h6>
-      </div>
-      <div class="col-sm-7 text-center text-muted">
-        <p style="text-align:justify">
-          I'm a Research Scientist (Director) at <a href="https://deepmind.google/">Google DeepMind</a> working on <a href="https://deepmind.google/technologies/gemini/#introduction">Gemini</a>, pushing the frontiers of multimodal intelligence
-          (<a href="https://blog.google/technology/developers/gemini-3-pro-vision">Dec 2025 blog</a> and <a href="https://developers.googleblog.com/en/gemini-2-5-video-understanding/">May 2025 blog</a>). My work at Google has centered on Generative AI and large-scale vision systems. 
-          Before joining Google, I earned my PhD from <a href="https://ethz.ch/de.html">ETH Zurich</a>, specializing in efficient and theoretically grounded data selection  
-          and clustering algorithms.
-        </p>
-      </div>
-    </div>
-  </div>
-</body></html>
+    <div class="background-glob use-gpu"></div>
+
+    <main class="container">
+        <div class="card glass">
+            <div class="profile-section">
+                <div class="image-container">
+                    <img src="lucic.jpg" alt="Mario Lucic" class="profile-image">
+                </div>
+
+                <div class="info-section">
+                    <h1 class="name">Mario Lučić</h1>
+                    <h2 class="role">Research Scientist, Director</h2>
+
+                    <div class="links">
+                        <a href="http://deepmind.google" class="link-item">Google DeepMind</a>
+                        <span class="separator">•</span>
+                        <a href="https://scholar.google.com/citations?user=SzZRlcMAAAAJ&hl=en&oi=ao"
+                            class="link-item">Scholar</a>
+                        <span class="separator">•</span>
+                        <a href="https://twitter.com/MarioLucic_" class="link-item">Twitter</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bio-section">
+                <p>
+                    I am a Director and Research Scientist at <a href="https://deepmind.google/"
+                        class="text-link">Google DeepMind</a>, co-leading the research behind Gemini’s
+                    video capabilities. My team addresses the full scope of video understanding, from <a
+                        href="https://developers.googleblog.com/en/gemini-2-5-video-understanding/"
+                        class="text-link">exocentric analysis</a> (YouTube) to egocentric, real-time reasoning (<a
+                        href="https://gemini.google/overview/gemini-live/" class="text-link">Gemini Live</a>). Our
+                    approach to native multimodal understanding yields state-of-the-art performance across the
+                    board
+                    (<a href="https://blog.google/products/gemini/gemini-3/" class="text-link">Gemini 3.0 blog</a> and
+                    the companion <a href="https://blog.google/technology/developers/gemini-3-pro-vision"
+                        class="text-link">vision
+                        blog</a>).
+                </p>
+                <p>
+                    I aim to solve video understanding as an essential component of multimodal
+                    intelligence, serving both as a catalyst for new capabilities and an enabler for multimodal
+                    generation. Prior to DeepMind, I worked on Generative AI and large-scale vision. I received my PhD
+                    from ETH Zurich, focusing on efficient data selection and clustering algorithms.
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
