@@ -1,81 +1,603 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1e1f1c" />
+    <title>Mario Lučić | Research & Gemini Video Demos</title>
+    <meta name="description" content="Personal research site of Mario Lučić, Director & Research Scientist at Google DeepMind leading Gemini Video capabilities and foundation models." />
+    <meta property="og:title" content="Mario Lučić | Research & Gemini Video Demos" />
+    <meta property="og:description" content="Personal research site of Mario Lučić, Director & Research Scientist at Google DeepMind leading Gemini Video capabilities and foundation models." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mario Lučić, Research Director at Google DeepMind.">
-    <meta name="theme-color" content="#0f172a">
-    <title>Mario Lučić</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+      :root {
+        --bg-color: #1e1f1c;
+        --card-bg: #272822;
+        --demo-card-bg: #1e1f1c;
+        --border-color: #3e3d32;
+        --border-subtle: #33332b;
+        --border-hover: #75715e;
+        --text-main: #f8f8f2;
+        --text-body: #cfcfc2;
+        --text-muted: #8f8d83;
+        --monokai-yellow: #e6db74;
+        --monokai-green: #a6e22e;
+        --monokai-cyan: #66d9ef;
+        --monokai-pink: #f92672;
+        --monokai-orange: #fd971f;
+        --link-color: #66d9ef;
+        --link-hover: #a6e22e;
+      }
 
-    <!-- Google Analytics (Legacy) -->
-    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142188401-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'UA-142188401-1');
-    </script>
-</head>
+      p {
+        text-wrap: pretty;
+      }
 
-<body>
-    <div class="background-glob use-gpu"></div>
+      h1, h2 {
+        text-wrap: balance;
+      }
 
-    <main class="container">
-        <div class="card glass">
-            <div class="profile-section">
-                <div class="image-container">
-                    <img src="lucic.jpg" alt="Mario Lucic" class="profile-image">
-                </div>
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-body);
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
 
-                <div class="info-section">
-                    <h1 class="name">Mario Lučić</h1>
-                    <h2 class="role">Research Scientist, Director</h2>
+      .page-container {
+        max-width: 64rem;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
 
-                    <div class="links">
-                        <a href="http://deepmind.google" class="link-item">Google DeepMind</a>
-                        <span class="separator">•</span>
-                        <a href="https://scholar.google.com/citations?user=SzZRlcMAAAAJ&hl=en&oi=ao"
-                            class="link-item">Scholar</a>
-                        <span class="separator">•</span>
-                        <a href="https://twitter.com/MarioLucic_" class="link-item">Twitter</a>
-                        <span class="separator">•</span>
-                        <a href="#" class="link-item" id="email-link">Email</a>
-                    </div>
-                </div>
+      @media (min-width: 640px) {
+        .page-container {
+          padding: 3rem 1.5rem;
+        }
+      }
+
+      .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      @media (min-width: 640px) {
+        .content-wrapper {
+          gap: 2rem;
+        }
+      }
+
+      /* Clean flat card */
+      .card {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 1.25rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+      }
+
+      @media (min-width: 640px) {
+        .card {
+          padding: 1.5rem;
+        }
+      }
+
+      /* Profile section */
+      .profile-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      @media (min-width: 640px) {
+        .profile-header {
+          flex-direction: row;
+          align-items: flex-start;
+          text-align: left;
+        }
+      }
+
+      .profile-image {
+        width: 104px;
+        height: 104px;
+        border-radius: 50%;
+        border: 2px solid var(--border-color);
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+
+      .profile-meta {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.375rem;
+        text-align: center;
+      }
+
+      @media (min-width: 640px) {
+        .profile-meta {
+          text-align: left;
+        }
+      }
+
+      .profile-name {
+        font-size: 1.875rem;
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: -0.025em;
+        color: var(--text-main);
+      }
+
+      .profile-role {
+        font-size: 0.9375rem;
+        font-weight: 500;
+        color: var(--text-muted);
+      }
+
+      .profile-links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding-top: 0.125rem;
+      }
+
+      @media (min-width: 640px) {
+        .profile-links {
+          justify-content: flex-start;
+        }
+      }
+
+      .link-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.375rem;
+        padding: 0.25rem 0.625rem;
+        border-radius: 6px;
+        font-size: 0.8125rem;
+        font-weight: 500;
+        color: var(--text-main);
+        background-color: #2d2e27;
+        border: 1px solid var(--border-color);
+        text-decoration: none;
+        transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+      }
+
+      .link-button:hover {
+        background-color: #383930;
+        color: var(--monokai-cyan);
+        border-color: var(--monokai-cyan);
+      }
+
+      .link-icon {
+        width: 12px;
+        height: 12px;
+        opacity: 0.85;
+      }
+
+      /* Bio text */
+      .bio-content {
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        font-size: 0.9375rem;
+        line-height: 1.65;
+        color: var(--text-body);
+      }
+
+      .bio-link {
+        color: var(--link-color);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(102, 217, 239, 0.4);
+        transition: border-color 0.15s ease, color 0.15s ease;
+      }
+
+      .bio-link:hover {
+        border-bottom-color: var(--link-hover);
+        color: var(--link-hover);
+      }
+
+      /* Announcements */
+      .announcements {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      .announcement-card {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .announcement-header {
+        display: flex;
+        flex-direction: column;
+        gap: 0.375rem;
+      }
+
+      .announcement-title-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 0.5rem;
+      }
+
+      .announcement-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--text-main);
+      }
+
+      .announcement-date {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        color: var(--monokai-yellow);
+      }
+
+      .announcement-desc {
+        font-size: 0.875rem;
+        color: var(--text-body);
+        line-height: 1.6;
+        text-wrap: pretty;
+      }
+
+      .external-blog-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--link-color);
+        text-decoration: none;
+        margin-left: 0.25rem;
+        white-space: nowrap;
+      }
+
+      .external-blog-link:hover {
+        text-decoration: underline;
+        color: var(--link-hover);
+      }
+
+      /* Video/Demo cards grid */
+      .demos-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.875rem;
+        padding-top: 0.25rem;
+      }
+
+      @media (min-width: 640px) {
+        .demos-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .demos-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .demo-card {
+        background-color: var(--demo-card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 0.875rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        transition: border-color 0.15s ease;
+      }
+
+      .demo-card:hover {
+        border-color: var(--border-hover);
+      }
+
+      .demo-title {
+        font-size: 0.9375rem;
+        font-weight: 600;
+        line-height: 1.4;
+        color: var(--text-main);
+        letter-spacing: -0.01em;
+        text-wrap: pretty;
+      }
+
+      .video-wrapper {
+        border-radius: 4px;
+        overflow: hidden;
+        background-color: #141412;
+        border: 1px solid var(--border-color);
+        aspect-ratio: 16 / 9;
+        width: 100%;
+      }
+
+      .video-player {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .demo-description {
+        font-size: 0.8125rem;
+        color: var(--text-body);
+        line-height: 1.6;
+        text-wrap: pretty;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <main class="content-wrapper">
+        <!-- Profile & Bio Section -->
+        <section id="profile-card" class="card">
+          <div class="profile-header">
+            <img
+              src="/lucic.jpg"
+              alt="Mario Lučić"
+              class="profile-image"
+              onerror="this.style.display='none'"
+            />
+            <div class="profile-meta">
+              <div>
+                <h1 class="profile-name">Mario Lučić</h1>
+                <p class="profile-role">Director @ Google DeepMind</p>
+              </div>
+              <div class="profile-links">
+                <a
+                  href="https://scholar.google.com/citations?user=SzZRlcMAAAAJ&hl=en&oi=ao"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="link-button"
+                >
+                  <span>Scholar</span>
+                  <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+                <a
+                  href="https://twitter.com/MarioLucic_"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="link-button"
+                >
+                  <span>Twitter</span>
+                  <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bio Paragraphs -->
+          <div class="bio-content">
+            <p>
+              I am a Director and Research Scientist at
+              <a href="https://deepmind.google/" target="_blank" rel="noreferrer" class="bio-link">Google DeepMind</a>,
+              leading research teams across video understanding, agentic vision, and compact encoders for Gemini. Our native architectures set state-of-the-art benchmarks across core capabilities (see the
+              <a href="https://blog.google/products/gemini/gemini-3/" target="_blank" rel="noreferrer" class="bio-link">Gemini 3.0 announcement</a>
+              and
+              <a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-3-pro-vision/" target="_blank" rel="noreferrer" class="bio-link">Gemini 3 Pro Vision</a>).
+              Most recently, I pioneered
+              <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/" target="_blank" rel="noreferrer" class="bio-link">agentic video understanding</a>,
+              shifting from static fixed-rate processing to an active loop where the model dynamically searches, scans, and inspects video segments across frames, audio, and transcripts. These models are deployed across YouTube, Search, Vertex AI, and other Google surfaces. Earlier at Google, my research centered on foundational representation learning and novel vision architectures. Prior to joining Google, I completed my PhD at ETH Zurich on efficient data selection, clustering, and discrete optimization&nbsp;algorithms.
+            </p>
+          </div>
+        </section>
+
+        <!-- Flagship Announcements -->
+        <div class="announcements">
+          <!-- Announcement 1: Agentic Video -->
+          <section id="announcement-agentic-video" class="card announcement-card">
+            <div class="announcement-header">
+              <div class="announcement-title-row">
+                <h2 class="announcement-title">Agentic video understanding</h2>
+                <span class="announcement-date">Sep 2026</span>
+              </div>
+              <p class="announcement-desc">
+                A paradigm shift from static video processing (where the model ingests video at a fixed frame rate) to an active, goal-directed agentic loop. Gemini invokes internal tools to dynamically search, scan, and inspect target video segments across visual frames, audio, and transcripts—cutting token usage and overall&nbsp;cost.
+                <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/" target="_blank" rel="noreferrer" class="external-blog-link">
+                  <span>Read Google post</span>
+                  <svg style="width: 12px; height: 12px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </p>
             </div>
 
-            <div class="bio-section">
-                <p>
-                    I am a Director and Research Scientist at <a href="https://deepmind.google/" class="text-link">Google DeepMind</a>, leading the research teams and technical strategy behind Gemini’s video understanding and multimodal foundation models.
+            <div class="demos-grid">
+              <div class="demo-card">
+                <h3 class="demo-title">Token-efficient long-form video analysis (LongVideoBench)</h3>
+                <div class="video-wrapper">
+                  <video
+                    src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/SxS_LVBench_with_end_card.mp4"
+                    controls
+                    playsinline
+                    preload="metadata"
+                    class="video-player"
+                  ></video>
+                </div>
+                <p class="demo-description">
+                  Across long-form video (from 10-minute how-to guides to 90-minute lectures and multi-hour recordings), static processing forces a tradeoff between prohibitive token costs or techniques that drop critical details. Agentic video invokes internal tools to load only relevant video parts, achieving the Pareto frontier of&nbsp;accuracy-to-cost.
                 </p>
-                <p>
-                    My team drives the full spectrum of spatiotemporal reasoning: from web-scale <a href="https://developers.googleblog.com/en/gemini-2-5-video-understanding/" class="text-link">exocentric analysis</a> deployed across YouTube and Vertex AI, to low-latency <a href="https://gemini.google/overview/gemini-live/" class="text-link">egocentric reasoning</a> powering Gemini Live. Our native multimodal architectures set state-of-the-art benchmarks across core capabilities (see the <a href="https://blog.google/products/gemini/gemini-3/" class="text-link">Gemini 3.0 blog</a> and companion <a href="https://blog.google/technology/developers/gemini-3-pro-vision" class="text-link">vision blog</a>).
+              </div>
+
+              <div class="demo-card">
+                <h3 class="demo-title">Accurate fast action analysis with dynamic FPS</h3>
+                <div class="video-wrapper">
+                  <video
+                    src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/AgenticVideo_Jumping_Jacks_Final_1.mp4"
+                    controls
+                    playsinline
+                    preload="metadata"
+                    class="video-player"
+                  ></video>
+                </div>
+                <p class="demo-description">
+                  With agentic video understanding, Gemini (e.g. 3.7 Flash) accurately counts fast-paced movements by dynamically scanning and rewatching the video at different frames per second as needed. Unlike static 1 FPS sampling that completely misses rapid motion, the agentic loop isolates sub-second action&nbsp;boundaries.
                 </p>
-                <p>
-                    Most recently, we introduced <a class="text-link" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/">agentic video understanding</a>, advancing a core thesis in multimodal intelligence: coupling native spatiotemporal scaling with active perception, enabling models to dynamically reason and control what they observe across space and time.
+              </div>
+
+              <div class="demo-card">
+                <h3 class="demo-title">Token-efficient needle-in-a-haystack search</h3>
+                <div class="video-wrapper">
+                  <video
+                    src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/KW_SxS-needle_Blog_V1.mp4"
+                    controls
+                    playsinline
+                    preload="metadata"
+                    class="video-player"
+                  ></video>
+                </div>
+                <p class="demo-description">
+                  Using agentic video understanding, Gemini accurately answers complex questions based on video content while consuming a significantly lower number of tokens compared to static analysis. It searches transcripts and audio cues before fetching targeted visual&nbsp;frames.
                 </p>
-                <p>
-                    Prior to DeepMind, I worked on Generative AI and large-scale vision systems. I completed my PhD at ETH Zurich, focused on efficient data selection and discrete optimization algorithms.
-                </p>
+              </div>
             </div>
+          </section>
+
+          <!-- Announcement 2: Gemini Live -->
+          <section id="announcement-gemini-live" class="card announcement-card">
+            <div class="announcement-header">
+              <div class="announcement-title-row">
+                <h2 class="announcement-title">Gemini live</h2>
+                <span class="announcement-date">Sep 2026</span>
+              </div>
+              <p class="announcement-desc">
+                Gemini 3.8 Live processes visual inputs in near real time (sub-240ms latency across 97 supported languages), enriching conversations with live visual context. Combined with Extended Thinking, the model reasons and speaks simultaneously—handling complex tasks, physical environments, and background tool calls without interrupting live&nbsp;conversation.
+                <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/" target="_blank" rel="noreferrer" class="external-blog-link">
+                  <span>Read Google post</span>
+                  <svg style="width: 12px; height: 12px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </p>
+            </div>
+
+            <div class="demos-grid">
+              <div class="demo-card">
+                <h3 class="demo-title">Agent-to-Agent Live Multimodal Collaboration</h3>
+                <div class="video-wrapper">
+                  <video
+                    src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/FINAL_0914_A2A_business-edit-v7_260914c.mp4"
+                    controls
+                    playsinline
+                    preload="metadata"
+                    class="video-player"
+                  ></video>
+                </div>
+                <p class="demo-description">
+                  Two Gemini agents interacting over live video and audio streams, dynamically coordinating business strategy documents and marketing collateral on screen in real&nbsp;time.
+                </p>
+              </div>
+
+              <div class="demo-card">
+                <h3 class="demo-title">Near real-time visual chess gameplay</h3>
+                <div class="video-wrapper">
+                  <video
+                    src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/gemini-audio__demo__chess-player.mp4"
+                    controls
+                    playsinline
+                    preload="metadata"
+                    class="video-player"
+                  ></video>
+                </div>
+                <p class="demo-description">
+                  Gemini 3.8 Live plays chess in near real-time using visual context from a continuous video feed, evaluating board states and maintaining natural conversational banter without pausing&nbsp;speech.
+                </p>
+              </div>
+
+              <div class="demo-card">
+                <h3 class="demo-title">Live visual onboarding &amp; workspace guidance</h3>
+                <div class="video-wrapper">
+                  <video
+                    src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/gemini-audio__demo__onboarding-agent_0aogTZV.mp4"
+                    controls
+                    playsinline
+                    preload="metadata"
+                    class="video-player"
+                  ></video>
+                </div>
+                <p class="demo-description">
+                  Gemini 3.8 Live guides tasks in real time, using continuous visual context from camera feeds to answer live questions as users handle physical equipment, micro-controllers, or workspace&nbsp;tools.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Announcement 3: Gemini 3 Pro Vision -->
+          <section id="announcement-gemini-3-pro-vision" class="card announcement-card">
+            <div class="announcement-header">
+              <div class="announcement-title-row">
+                <h2 class="announcement-title">Gemini 3 Pro Vision</h2>
+                <span class="announcement-date">Dec 2025</span>
+              </div>
+              <p class="announcement-desc">
+                A generational jump in multimodal vision and spatial reasoning. Gemini 3 Pro Vision interprets complex documents, follows dynamic events in high frame rate video (up to 10 FPS), localizes visual items with pixel-precise pointing coordinates, and offers granular control over latency and token cost via adaptive media&nbsp;resolution.
+                <a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-3-pro-vision/" target="_blank" rel="noreferrer" class="external-blog-link">
+                  <span>Read Google post</span>
+                  <svg style="width: 12px; height: 12px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </p>
+            </div>
+
+            <div class="demos-grid">
+              <div class="demo-card">
+                <h3 class="demo-title">Pixel-Precise Spatial Pointing &amp; Coordinate Grounding</h3>
+                <p class="demo-description">
+                  Gemini 3 Pro Vision moves beyond basic classification to output pixel-precise coordinates for elements in intricate images and diagrams. This unlocks open-vocabulary spatial grounding, UI component localization, and direct visual referencing for agents and downstream&nbsp;tools.
+                </p>
+              </div>
+
+              <div class="demo-card">
+                <h3 class="demo-title">High Frame Rate Video Understanding (up to 10 FPS)</h3>
+                <p class="demo-description">
+                  Native support for high frame rate video processing allows Gemini 3 Pro Vision to follow fast actions, identify cause-and-effect sequences across fleeting moments, and perform fine-grained temporal analysis across multi-modal video&nbsp;feeds.
+                </p>
+              </div>
+
+              <div class="demo-card">
+                <h3 class="demo-title">Complex Document &amp; Multi-Page Layout Analysis</h3>
+                <p class="demo-description">
+                  Deep reasoning over mixed-format documents, dense technical schematics, tables, and handwritten notes. The model preserves native aspect ratios and scales computation smoothly using adaptive media&nbsp;resolution.
+                </p>
+              </div>
+            </div>
+          </section>
         </div>
-    </main>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var u = 'mario';
-            var d = 'lucic.ai';
-            var link = document.getElementById('email-link');
-            if (link) {
-                link.href = 'mailto:' + u + '@' + d;
-            }
-        });
-    </script>
-</body>
-
+      </main>
+    </div>
+  </body>
 </html>
