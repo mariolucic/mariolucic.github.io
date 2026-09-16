@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#1e1f1c" />
+    <meta name="theme-color" content="#f8fafc" />
     <title>Mario Lučić | Research & Gemini Video Demos</title>
     <meta name="description" content="Personal research site of Mario Lučić, Director & Research Scientist at Google DeepMind leading Gemini Video capabilities and foundation models." />
     <meta property="og:title" content="Mario Lučić | Research & Gemini Video Demos" />
@@ -21,22 +21,17 @@
       }
 
       :root {
-        --bg-color: #1e1f1c;
-        --card-bg: #272822;
-        --demo-card-bg: #1e1f1c;
-        --border-color: #3e3d32;
-        --border-subtle: #33332b;
-        --border-hover: #75715e;
-        --text-main: #f8f8f2;
-        --text-body: #cfcfc2;
-        --text-muted: #8f8d83;
-        --monokai-yellow: #e6db74;
-        --monokai-green: #a6e22e;
-        --monokai-cyan: #66d9ef;
-        --monokai-pink: #f92672;
-        --monokai-orange: #fd971f;
-        --link-color: #66d9ef;
-        --link-hover: #a6e22e;
+        --bg-color: #f8fafc;
+        --card-bg: #ffffff;
+        --demo-card-bg: #f8fafc;
+        --border-color: #e2e8f0;
+        --border-subtle: #f1f5f9;
+        --border-hover: #94a3b8;
+        --text-main: #0f172a;
+        --text-body: #334155;
+        --text-muted: #64748b;
+        --link-color: #1d4ed8;
+        --link-hover: #1e40af;
       }
 
       p {
@@ -85,7 +80,7 @@
         border: 1px solid var(--border-color);
         border-radius: 12px;
         padding: 1.25rem;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
       }
 
       @media (min-width: 640px) {
@@ -172,23 +167,23 @@
         border-radius: 6px;
         font-size: 0.8125rem;
         font-weight: 500;
-        color: var(--text-main);
-        background-color: #2d2e27;
+        color: var(--text-body);
+        background-color: #ffffff;
         border: 1px solid var(--border-color);
         text-decoration: none;
         transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
       }
 
       .link-button:hover {
-        background-color: #383930;
-        color: var(--monokai-cyan);
-        border-color: var(--monokai-cyan);
+        background-color: var(--border-subtle);
+        color: var(--text-main);
+        border-color: var(--border-hover);
       }
 
       .link-icon {
         width: 12px;
         height: 12px;
-        opacity: 0.85;
+        opacity: 0.7;
       }
 
       /* Bio text */
@@ -205,7 +200,7 @@
       .bio-link {
         color: var(--link-color);
         text-decoration: none;
-        border-bottom: 1px solid rgba(102, 217, 239, 0.4);
+        border-bottom: 1px solid rgba(29, 78, 216, 0.3);
         transition: border-color 0.15s ease, color 0.15s ease;
       }
 
@@ -250,7 +245,8 @@
       .announcement-date {
         font-family: 'JetBrains Mono', monospace;
         font-size: 0.75rem;
-        color: var(--monokai-yellow);
+        font-weight: 500;
+        color: var(--text-muted);
       }
 
       .announcement-desc {
@@ -305,11 +301,12 @@
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
-        transition: border-color 0.15s ease;
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
       }
 
       .demo-card:hover {
         border-color: var(--border-hover);
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
       }
 
       .demo-title {
@@ -324,7 +321,7 @@
       .video-wrapper {
         border-radius: 4px;
         overflow: hidden;
-        background-color: #141412;
+        background-color: #0b0f19;
         border: 1px solid var(--border-color);
         aspect-ratio: 16 / 9;
         width: 100%;
@@ -402,7 +399,7 @@
               <a href="https://blog.google/products/gemini/gemini-3/" target="_blank" rel="noreferrer" class="bio-link">Gemini 3.0 announcement</a>
               and
               <a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-3-pro-vision/" target="_blank" rel="noreferrer" class="bio-link">Gemini 3 Pro Vision</a>).
-              Most recently, we pioneered
+              Most recently, I pioneered
               <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/" target="_blank" rel="noreferrer" class="bio-link">agentic video understanding</a>,
               shifting from static fixed-rate processing to an active loop where the model dynamically searches, scans, and inspects video segments across frames, audio, and transcripts. These models are deployed across YouTube, Search, Vertex AI, and other Google surfaces. Earlier at Google, my research centered on foundational representation learning and novel vision architectures. Prior to joining Google, I completed my PhD at ETH Zurich on efficient data selection, clustering, and discrete optimization&nbsp;algorithms.
             </p>
